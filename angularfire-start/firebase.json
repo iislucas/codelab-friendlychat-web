@@ -5,7 +5,7 @@
   },
   "hosting": [
     {
-      "site": "angularfire",
+      "site": "angularfireapp",
       "source": ".",
       "ignore": [
         "firebase.json",
