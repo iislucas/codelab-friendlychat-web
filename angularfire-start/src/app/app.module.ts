@@ -40,35 +40,35 @@ import { HeaderComponent } from './components/header/header.component';
     BrowserModule, AppRoutingModule, CommonModule, FormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => {
-        const auth = getAuth();
-        if (location.hostname === 'localhost') {
-            connectAuthEmulator(auth, 'http://127.0.0.1:9099', { disableWarnings: true });
-        }
-        return auth;
+      const auth = getAuth();
+      if (location.hostname === 'localhost') {
+        connectAuthEmulator(auth, 'http://127.0.0.1:9099', { disableWarnings: true });
+      }
+      return auth;
     }),
     provideFirestore(() => {
-        const firestore = getFirestore();
-        if (location.hostname === 'localhost') {
-            connectFirestoreEmulator(firestore, '127.0.0.1', 8080);
-        }
-        return firestore;
+      const firestore = getFirestore();
+      if (location.hostname === 'localhost') {
+        connectFirestoreEmulator(firestore, '127.0.0.1', 8080);
+      }
+      return firestore;
     }),
     provideFunctions(() => {
-        const functions = getFunctions();
-        if (location.hostname === 'localhost') {
-            connectFunctionsEmulator(functions, '127.0.0.1', 5001);
-        }
-        return functions;
+      const functions = getFunctions();
+      if (location.hostname === 'localhost') {
+        connectFunctionsEmulator(functions, '127.0.0.1', 5001);
+      }
+      return functions;
     }),
     provideStorage(() => {
-        const storage = getStorage();
-        if (location.hostname === 'localhost') {
-            connectStorageEmulator(storage, '127.0.0.1', 5001);
-        }
-        return storage;
+      const storage = getStorage();
+      if (location.hostname === 'localhost') {
+        connectStorageEmulator(storage, '127.0.0.1', 5001);
+      }
+      return storage;
     }),
     provideMessaging(() => {
-        return getMessaging();
+      return getMessaging();
     }),
   ],
   providers: [
