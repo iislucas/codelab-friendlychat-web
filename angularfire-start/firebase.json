@@ -5,20 +5,17 @@
   },
   "hosting": [
     {
+      "site": "angularfire",
       "source": ".",
       "ignore": [
         "firebase.json",
+        ".editorconfig",
         "**/.*",
         "**/node_modules/**"
       ],
       "frameworksBackend": {
         "region": "us-central1"
       }
-    },
-    {
-      "target": "friendlychat",
-      "source": ".",
-      "frameworksBackend": {}
     }
   ],
   "storage": {

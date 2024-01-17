@@ -1,0 +1,8 @@
+# Logs
+ui-debug.log
+firestore-debug.log
+
+# Project Deployment / Env files...
+src/environments
+firebase-config.ts
+firebase.json
