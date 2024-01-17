@@ -2,9 +2,54 @@
 
 ## Project setup notes...
 
+### Local offline use...
+
 1. Copy `src/environments/firebase-config.template.ts` to `src/environments/firebase-config.ts` and fill in the values from the Firebase project you are working on. 
 
-3. Run `npm install` to install the dependencies; don't run `npm audit fix` - it usually breaks stuff :) 
+1. Run `npm install` to install the dependencies; don't run `npm audit fix` - it usually breaks stuff.
+
+1. Run `cd functions && npm install` to install the dependencies for firebase functions.
+
+1. Run: `firebase use add <projectname>` to setup firebase in this directory to use your project.
+
+1. If working with Visual Studio Code (recommended), Install "Angular Langauge Services" extension.
+
+1. Run: `npm run start` to start a local build, and make sure the front end can build. Control-c to stop it.
+  1. If a port is in use; don't use a different port! This means you are likely to have two different builds running in parallel if you do that, it can get emulators and other things confused. 
+
+1. Run `npm run emulate` to start a full local firebase emulator
+
+You should see something like this when it works...
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬─────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:4000/auth      │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Firestore      │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Hosting        │ 127.0.0.1:5000 │ n/a                             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Storage        │ 127.0.0.1:9199 │ http://127.0.0.1:4000/storage   │
+└────────────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500, 9150
+
+```
+
+### Deploying and using online...
+
+1. Run: `firebase auth login` to authentictae with your cloud project.
+
+1. TODO: add more instructions...
 
 ## Development server
 
