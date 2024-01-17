@@ -1,3 +1,4 @@
+// Copy this file to environment.ts, and enter the appropriate fields.
 export const environment = {
   firebase: {
     apiKey: 'API_KEY',

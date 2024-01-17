@@ -3,6 +3,6 @@ ui-debug.log
 firestore-debug.log
 
 # Project Deployment / Env files...
-src/environments
+src/environments/environment.ts
 firebase-config.ts
 firebase.json
